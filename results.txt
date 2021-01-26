@@ -1,0 +1,5 @@
+center with id 0 has coordinates (-74.00230011766776, 40.73169985176288)
+center with id 1 has coordinates (-73.83759587792197, 40.71642357510716)
+center with id 2 has coordinates (-73.99480097463035, 40.713152178744146)
+center with id 3 has coordinates (-73.98811549038231, 40.74593646854986)
+center with id 4 has coordinates (-73.9685119851316, 40.772067643696445)
