@@ -1,0 +1,25 @@
+rides = read("yellow_tripdata_1m.csv")
+filter(rides)
+centers = head(rides, 5)
+Repeat 3 times:
+    mapped_rides = rides.map(closest(ride, centers), ride)
+    centers = mean(mapped_rides.reduce())
+
+print(centers)
+
+
+//-------- MAP --------//
+map(value):
+// value: (x,y) coordinates of start of ride
+id = closest((x,y), centers)
+emit(id, (x,y))
+
+
+//-------- REDUCE --------//
+reduce(key, value):
+// key: id of center
+// value: [(x1,y1), (x2,y2), ...]
+(sumX, sumY) = sum(value)
+times = len(value)
+result = ( sumX / times, sumY / times )
+emit((x, result))
